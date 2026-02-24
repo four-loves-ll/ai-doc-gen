@@ -1,3 +1,26 @@
+1python -m ai_doc_gen --config config.yaml --path ./your-repo
+# Sofia Core: Symbiotic Documentation Configuration
+project_name: "Hemet Flagship"
+output_path: "./docs/sofia_core"
+llm_model: "openai:gpt-4o"
+log_level: "INFO"
+
+# Protection Layer: Preventing recursive analysis and data noise
+exclude_dirs: 
+  - "venv"
+  - ".git"
+  - "tests"
+  - "docs"
+  - "__pycache__"
+
+# Symbiotic Audit Settings (Optional Addition)
+include_mission_statement: true
+safety_protocol_check: true # Aligns with Aigis Cars Safety Protocols
+project_name: "Hemet Flagship"
+output_path: "./docs/sofia_core"
+exclude_dirs: ["venv", ".git", "tests", "docs"]  # Added docs
+llm_model: "openai:gpt-4o"
+log_level: "INFO"
 # AI Documentation Generator
 
 An AI-powered code documentation generator that automatically analyzes repositories and creates comprehensive documentation using advanced language models. The system employs a multi-agent architecture to perform specialized code analysis and generate structured documentation.
