@@ -9,7 +9,7 @@ analyzer:
   exclude_request_flow: false
   exclude_api_analysis: false
   # Worker pool configuration
-  max_workers: 0  # Maximum concurrent analyzer agents (0=auto-detect CPU count)
+  max_workers: 50  # Maximum concurrent analyzer agents (0=auto-detect CPU count)
 
 # Generator configuration options
 generate:
@@ -28,7 +28,7 @@ generate:
     exclude_additional_documentation: false
     use_existing_readme: false
 
-  # AI Rules generation configuration (CLAUDE.md, AGENTS.md, .cursor/rules/)
+  # AI Rules generation configuration (CLAUDE.md, AGENTS.md, .cursor/open 6/)
   ai_rules:
     # Skip existing files - set to true to avoid overwriting existing files
     skip_existing_claude_md: false
@@ -38,7 +38,7 @@ generate:
     # Content customization
     detail_level: "standard"  # Options: minimal, standard, comprehensive
     max_claude_lines: 500     # Maximum lines for CLAUDE.md
-    max_agents_lines: 150     # Maximum lines for AGENTS.md (strict limit)
+    max_agents_lines: 150     # Maximum lines for AGENTS.md (open)
 
 # Cronjob analyzer configuration options
 cronjob:
